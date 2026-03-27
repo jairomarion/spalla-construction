@@ -1,0 +1,65 @@
+/* 1. Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Base Global Styles */
+@layer base {
+  :root {
+    /* Define base RGB values if you ever need raw RGB variables */
+    --foreground-rgb: 15, 23, 42; /* slate-900 */
+    --background-rgb: 248, 250, 252; /* slate-50 */
+  }
+
+  /* Enables smooth scrolling for # anchor links in your navbar */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Sets the baseline for the entire website */
+  body {
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+    /* antialiased makes text render sharper on Mac/iOS devices */
+    @apply antialiased min-h-screen font-sans overflow-x-hidden;
+  }
+
+  /* Customizes the highlight color when a user drags to select text */
+  ::selection {
+    @apply bg-spalla-green/30 text-spalla-dark;
+  }
+  
+  ::-moz-selection {
+    @apply bg-spalla-green/30 text-spalla-dark;
+  }
+}
+
+/* 3. Custom Utilities & Scrollbar */
+@layer utilities {
+  /* Hide the scrollbar for background video containers if needed */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Custom Main Browser Scrollbar to match the industrial/modern vibe */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full border-2 border-slate-100;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /* Turns green when the user hovers over the scrollbar */
+    @apply bg-spalla-green; 
+  }
+}
