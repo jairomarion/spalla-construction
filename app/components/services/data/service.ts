@@ -57,7 +57,7 @@ export const services = [
     title: "Project Management",
     icon: Briefcase,
     color: "bg-purple-500",
-    image: "/ProjectManagement.jpg",
+    image: "/projectManagement.jpg",
     description:
       "End-to-end project management from feasibility studies and design coordination to procurement and supervision.",
 details: [
