@@ -20,7 +20,7 @@ export default function Clients() {
         {/* Heading */}
         <div className="text-center mb-16">
           <p className="tracking-[6px] text-green-600 text-sm font-semibold">
-            PORTFOLIO
+            TRUSTED BY 
           </p>
           <h1 className="text-5xl md:text-6xl font-bold mt-2">
             Our <span className="text-green-600">Clients</span>

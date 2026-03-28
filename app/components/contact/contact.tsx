@@ -16,7 +16,6 @@ export default function Contact() {
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
             <div>
               <p className="text-slate-600 mb-10 max-w-md">
                 Reach out to us for any inquiries, project discussions, or
@@ -33,7 +32,7 @@ export default function Contact() {
                       Head Office
                     </h4>
                     <p className="text-slate-500 mt-1 text-sm">
-                      Trio Complex Nairobi, 4th Floor
+                      Trio Complex Nairobi, 4TH Foor, West Wing.
                       <br />
                       Nairobi, Kenya
                     </p>
