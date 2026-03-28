@@ -38,7 +38,6 @@ export default function StatsSection() {
 
   return (
     <section className="bg-white py-28 border-t border-slate-200 relative overflow-hidden">
-      {/* subtle background accent */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-slate-50 to-transparent pointer-events-none"></div>
 
       <div
@@ -55,21 +54,18 @@ export default function StatsSection() {
             }`}
             style={{ transitionDelay: `${index * 150}ms` }}
           >
-            {/* number */}
             <h2 className="text-[52px] md:text-[64px] font-extrabold text-spalla-green leading-none">
               {isVisible && <Counter end={stat.value} />}
               {stat.suffix}
             </h2>
 
-            {/* premium divider replacement */}
             <div className="flex items-center gap-2 my-4">
-              <div className="w-6 h-[1px] bg-slate-300"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-spalla-green"></div>
-              <div className="w-6 h-[1px] bg-slate-300"></div>
+              <div className="w-6 h-px bg-spalla-orange"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-spalla-orange"></div>
+              <div className="w-6 h-px bg-spalla-orange"></div>
             </div>
 
-            {/* label */}
-            <p className="text-[12px] tracking-[0.25em] uppercase text-slate-500 font-semibold text-center max-w-[160px]">
+            <p className="text-[12px] tracking-[0.25em] uppercase text-slate-500 font-semibold text-center max-w-40">
               {stat.label}
             </p>
           </div>

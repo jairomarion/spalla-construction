@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export const CLIENTS = [
@@ -13,32 +15,33 @@ export const CLIENTS = [
 
 export default function Clients() {
   return (
-    <section className="py-20 bg-linear-to-br from-white to-slate-50 border-t border-slate-100">
+    <section id="clients" className="py-24 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="text-spalla-green font-bold tracking-widest uppercase text-sm mb-2">
-            TRUSTED BY
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-2 tracking-tight bg-linear-to-r from-spalla-green via-black to-spalla-orange bg-clip-text text-transparent inline-block">
-            Our Clients
-          </h2>
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <p className="tracking-[6px] text-green-600 text-sm font-semibold">
+            PORTFOLIO
+          </p>
+          <h1 className="text-5xl md:text-6xl font-bold mt-2">
+            Our <span className="text-green-600">Clients</span>
+          </h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center items-center">
+
+        {/* Clients Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
           {CLIENTS.map((logo, idx) => (
             <div
               key={logo}
-              className="flex flex-col items-center justify-center bg-white rounded-2xl shadow-lg border border-slate-100 px-8 py-10 min-h-40 min-w-55 mx-auto hover:shadow-xl transition-all duration-200"
-              style={{ boxShadow: "0 4px 24px 0 rgba(16,30,54,0.07)" }}
+              className="group flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 p-6 h-32 hover:bg-white hover:shadow-lg transition-all duration-300"
             >
-              <Image
-                src={logo}
-                alt={`Client logo ${idx + 1}`}
-                width={64}
-                height={64}
-                className="object-contain mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 max-h-16 max-w-16"
-                loading="lazy"
-              />
-              <span className="text-base font-medium text-slate-700 text-center mt-2"></span>
+              <div className="relative w-full h-full flex items-center justify-center max-h-20">
+                <Image
+                  src={logo}
+                  alt={`Client logo ${idx + 1}`}
+                  fill
+                  className="object-contain h-full w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300"
+                />
+              </div>
             </div>
           ))}
         </div>

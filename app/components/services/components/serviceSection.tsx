@@ -9,16 +9,15 @@ export default function ServicesSection() {
   const [selected, setSelected] = useState<any>(null);
 
   return (
-    <section className="py-20 px-4 md:px-10">
-      {/* Header */}
+    <section id="services" className="py-20 px-4 md:px-10">
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <p className="text-sm text-spalla-green tracking-widest uppercase">
-          What We Do
+        <p className="tracking-[6px] text-green-600 text-sm font-semibold">
+          WHAT WE DO
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+        <h1 className="text-5xl md:text-6xl font-bold mt-2">
           Our <span className="text-spalla-green">Services</span>
-        </h2>
+        </h1>
 
         <p className="text-slate-600 mt-4">
           From concept to completion, we provide comprehensive construction and
@@ -26,7 +25,6 @@ export default function ServicesSection() {
         </p>
       </div>
 
-      {/* Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service) => (
           <ServiceCard
@@ -37,7 +35,6 @@ export default function ServicesSection() {
         ))}
       </div>
 
-      {/* Modal */}
       {selected && (
         <ServiceModal service={selected} onClose={() => setSelected(null)} />
       )}

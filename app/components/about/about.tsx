@@ -37,7 +37,7 @@ export default function About() {
             </h2>
             <h3 className="text-[48px] lg:text-[64px] font-extrabold text-[#111827] leading-[1.05] tracking-[-0.04em] mb-8">
               Building Kenya's <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-spalla-green to-spalla-orange">
+              <span className="text-spalla-green">
                 Future
               </span>
             </h3>

@@ -42,7 +42,7 @@ export default function Hero() {
 
         <a
           href="#projects"
-          className="inline-block bg-white text-black hover:bg-green-600 hover:text-white font-bold py-4 px-10 transition-all duration-300 text-sm uppercase tracking-widest shadow-xl hover:-translate-y-1 cursor-pointer"
+          className="inline-block bg-spalla-green text-white hover:bg-green-600 hover:text-spalla-orange font-bold py-4 px-10 transition-all duration-300 text-sm uppercase tracking-widest shadow-xl hover:-translate-y-1 cursor-pointer"
         >
           Explore Our Projects
         </a>

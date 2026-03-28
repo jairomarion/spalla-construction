@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
+  { href: "#clients", label: "Clients" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -18,18 +19,18 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-20">
-        <Link href="#home" className="flex items-center gap-2 group">
-          <span className="relative w-10 h-10 flex items-center">
+        <Link href="#home" className="flex items-center gap-0 group">
+          <span className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center aspect-square">
             <Image
               src="/spalla-logo.png"
               alt="Spalla Logo"
-              width={40}
-              height={40}
+              fill
+              sizes="(max-width: 640px) 56px, (max-width: 768px) 64px, 80px"
               className="object-contain drop-shadow-md transition-transform group-hover:scale-105"
               priority
             />
           </span>
-          <span className="font-extrabold text-2xl text-spalla-green tracking-tight drop-shadow-sm group-hover:text-spalla-orange transition-colors">
+          <span className="font-extrabold text-2xl md:text-3xl text-spalla-green tracking-tight drop-shadow-sm transition-colors">
             Spalla
           </span>
         </Link>

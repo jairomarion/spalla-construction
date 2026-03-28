@@ -15,7 +15,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="bg-gray-50 py-28 px-6 border-t border-gray-200">
+    <section
+      id="projects"
+      className="bg-gray-50 py-28 px-6 border-t border-gray-200"
+    >
       <div className="text-center mb-20">
         <p className="tracking-[6px] text-green-600 text-sm font-semibold">
           PORTFOLIO
@@ -61,6 +64,7 @@ export default function Projects() {
               alt="Project"
               fill
               priority
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
               className="
                 object-cover
                 transition-transform
