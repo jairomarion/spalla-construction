@@ -13,6 +13,8 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Spalla Limited | Construction & Infrastructure",
   description: "Leaders in quality construction and infrastructure.",
+  icons:{
+   icon: "/spalla-logo.png",}
 };
 
 export default function RootLayout({
@@ -23,10 +25,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      // Apply the font variable and ensure text renders crisply (antialiased)
+      
       className={`${montserrat.variable} h-full antialiased`}
     >
-      {/* We apply font-sans here so every component inherits Montserrat automatically */}
+      
       <body className="font-sans min-h-full flex flex-col bg-slate-50 text-slate-900">
         <Navbar />
         {children}
