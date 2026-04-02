@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <span className="relative w-10 h-10 flex items-center aspect-square">
             <Image
-              src="/spalla-logo.png"
+              src="/Spalla.png"
               alt="Spalla Logo"
               fill
               sizes="40px"
@@ -50,6 +50,12 @@ export default function Footer() {
             className="hover:text-spalla-orange transition-colors"
           >
             Clients
+          </a>
+           <a
+            href="#social-impact"
+            className="hover:text-spalla-orange transition-colors"
+          >
+            Social Impact
           </a>
           <a
             href="#contact"

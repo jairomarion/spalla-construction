@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Spalla Limited | Construction & Infrastructure",
   description: "Leaders in quality construction and infrastructure.",
   icons:{
-   icon: "/spalla-logo.png",}
+   icon: "/Spalla.png",}
 };
 
 export default function RootLayout({

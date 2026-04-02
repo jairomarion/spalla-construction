@@ -6,7 +6,7 @@ import { ContactForm } from "@/app/components/contact/components/ContactForm";
 export default function Contact() {
   return (
     <>
-      <section  id="contact" className="py-24 bg-spalla-light text-spalla-dark">
+      <section  id="contact" className="py-24 bg-white text-spalla-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ContactHeader />
 
