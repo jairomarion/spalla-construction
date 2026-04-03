@@ -8,10 +8,12 @@ import Clients from "./components/clients/clients";
 import AboutSection from "./components/about/components/AboutSection";
 import ProjectsSection from "./components/projects/components/ProjectSection";
 import SocialImpactSection from "./components/socialImpact/socialImpact";
+import Navbar from "@/app/components/navbar/components/navbar";
 
 export default function Home() {
   return (
     <main className="flex flex-col w-full">
+      <Navbar/>
       <Hero />
       <AboutSection />
       <StatsSection />

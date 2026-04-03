@@ -43,7 +43,7 @@ export default function SocialImpactSection() {
           <div className="inline-flex items-center gap-4 mb-6">
             <span className="h-[2px] w-12 bg-spalla-green rounded-full"></span>
             <p className="text-spalla-green font-bold tracking-widest uppercase text-sm">
-              SOCIAL IMPACT
+              SPALLA SKILLS UPLIFT PROGRAM
             </p>
           </div>
 
