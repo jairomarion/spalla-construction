@@ -29,7 +29,7 @@ export default function Navbar() {
   <img
   src="/Spalla.png"
   alt="Spalla Logo"
-  className="h-48 md:h-48 w-auto object-contain"
+  className="h-32 md:h-32 w-auto object-contain"
 />
 </Link>
 
