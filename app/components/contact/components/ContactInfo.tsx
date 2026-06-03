@@ -6,7 +6,7 @@ export function ContactInfo() {
     <div>
       <p className="text-slate-600 mb-10 max-w-md">
         Reach out to us for any inquiries, project discussions, or partnership
-        opportunities. We're here to help you build with purpose.
+        opportunities. We&apos;re here to help you build with purpose.
       </p>
 
       <div className="space-y-8">

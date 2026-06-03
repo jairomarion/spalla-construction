@@ -63,7 +63,7 @@ export default function SocialImpactSection() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSexPLms5vTuw2T8m8VsQwmPobnwXNQ-Cmr7sYEIBv_gE4zSXg/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-spalla-green text-white hover:text-spalla-orange text-base font-semibold rounded-xl shadow-md hover:shadow-xl active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-spalla-green"
+              className="group inline-flex items-center justify-center px-8 py-4 bg-spalla-green text-white hover:text-spalla-orange text-base font-semibold rounded-full shadow-md hover:shadow-xl active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-spalla-green"
               aria-label="Join our apprenticeship program"
             >
               Join Our Program

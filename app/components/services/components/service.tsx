@@ -25,11 +25,7 @@ export default function ServiceCard({ service, onClick }: any) {
           />
         </span>
         <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
-        <div
-          className={`absolute -bottom-5.5 left-6 w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg ${service.color} group-hover:scale-110 transition`}
-        >
-          <Icon size={22} />
-        </div>
+        {/* Icon intentionally removed from card preview; shown in modal on click */}
       </div>
       <div className="pt-10 pb-6 px-6">
         <h3 className="text-xl font-bold text-slate-900 mb-2">

@@ -16,7 +16,7 @@ export default function ProjectsSection() {
   } = useProjects();
 
   return (
-    <section id="projects" className="bg-gray-50 py-24 px-4 md:px-10 border-t">
+    <section id="projects" className="bg-white py-24 px-4 md:px-10">
       {/* Header */}
       <div className="text-center mb-14">
         <p className="tracking-[6px] text-spalla-green text-sm font-semibold uppercase">

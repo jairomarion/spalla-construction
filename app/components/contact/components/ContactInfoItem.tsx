@@ -1,4 +1,12 @@
-export function ContactInfoItem({ icon: Icon, title, value }: any) {
+import { LucideIcon } from "lucide-react";
+
+interface ContactInfoItemProps {
+  icon: LucideIcon;
+  title: string;
+  value: React.ReactNode;
+}
+
+export function ContactInfoItem({ icon: Icon, title, value }: ContactInfoItemProps) {
   return (
     <div className="flex items-start gap-4 group">
       <span className="w-12 h-12 rounded-xl bg-linear-to-br from-spalla-green to-spalla-orange flex items-center justify-center shadow-md group-hover:scale-105 transition">

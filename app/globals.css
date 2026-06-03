@@ -66,5 +66,5 @@
 }
 
 .btn-submit {
-  @apply w-full bg-gradient-to-r from-spalla-green to-spalla-orange text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 disabled:opacity-50;
+  @apply w-full bg-gradient-to-r from-spalla-green to-spalla-orange text-white font-bold py-4 rounded-full flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 disabled:opacity-50;
 }

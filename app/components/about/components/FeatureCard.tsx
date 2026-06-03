@@ -1,7 +1,9 @@
 "use client";
 
+import { LucideIcon } from "lucide-react";
+
 type FeatureCardProps = {
-  icon: any;
+  icon: LucideIcon;
   title: string;
   desc: string;
   delay: number;

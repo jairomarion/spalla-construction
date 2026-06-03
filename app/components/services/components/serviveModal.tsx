@@ -94,7 +94,10 @@ export default function ServiceModal({ service, onClose }: Props) {
             </div>
 
             <div className="flex gap-4 justify-end">
-              <button onClick={onClose} className="border px-5 py-2 rounded-lg">
+              <button
+                onClick={onClose}
+                className="border border-slate-200 px-6 py-2 rounded-full hover:bg-slate-50 transition-colors"
+              >
                 Close
               </button>
             </div>
