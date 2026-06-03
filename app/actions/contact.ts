@@ -1,12 +1,10 @@
 "use server";
 
-import nodemailer from "nodemailer";
 import { Resend } from "resend";
 
 export async function submitContactForm(formData: FormData) {
   const resendKey = process.env.RESEND_API_KEY;
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
+  const emailFrom = process.env.EMAIL_FROM || "Spalla Ltd <hello@spallaltd.com>";
   const recipient = process.env.CONTACT_RECIPIENT_EMAIL || "spallaltd@gmail.com";
 
   const firstName = formData.get("firstName")?.toString().trim() ?? "";
@@ -39,46 +37,43 @@ export async function submitContactForm(formData: FormData) {
   `;
 
   try {
-    if (resendKey) {
-      const resend = new Resend(resendKey);
-      await resend.emails.send({
-        from: `Spalla Ltd <hello@spallaltd.com>`,
-        to: recipient,
-        subject: emailSubject,
-        text: emailText,
-        html: emailHtml,
-        replyTo: email,
-      });
-    } else if (user && pass) {
-      const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-          user,
-          pass,
-        },
-      });
-
-      await transporter.sendMail({
-        from: `"${firstName} ${lastName}" <${user}>`,
-        replyTo: email,
-        to: recipient,
-        subject: emailSubject,
-        text: emailText,
-        html: emailHtml,
-      });
-    } else {
-      console.error("CONTACT_FORM_ERROR: No email provider configured.");
+    if (!resendKey) {
+      console.error("CONTACT_FORM_ERROR: RESEND_API_KEY is missing.");
       return {
         error:
-          "Email sending is not configured. Set RESEND_API_KEY or valid Gmail SMTP credentials in .env.local.",
+          "Email sending is not configured. Set RESEND_API_KEY in environment variables.",
+      };
+    }
+
+    const resend = new Resend(resendKey);
+    const sendResult = await resend.emails.send({
+      from: emailFrom,
+      to: recipient,
+      subject: emailSubject,
+      text: emailText,
+      html: emailHtml,
+      replyTo: email,
+    });
+
+    console.log("CONTACT_EMAIL_RESULT", {
+      provider: "resend",
+      recipient,
+      messageId: sendResult.data?.id,
+      sendData: sendResult.data,
+      headers: sendResult.headers,
+    });
+
+    if (!sendResult?.data?.id) {
+      console.error("CONTACT_EMAIL_NO_ID", sendResult);
+      return {
+        error:
+          "Email service did not return a message ID. Check server logs for Resend response.",
       };
     }
 
     return { success: "Message sent successfully!" };
   } catch (error) {
-    console.error("Nodemailer/Resend error:", error);
+    console.error("Resend error:", error);
     return {
       error:
         "Failed to send the message. Check your email provider settings and server logs.",
